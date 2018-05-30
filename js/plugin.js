@@ -36,6 +36,7 @@ function listTemplate(task) {
 
 // AddTask
 function addTask(text) {
+    if (!text) return new Error ('There is no text');
     // Create task object
     const newTask = {text, id: String(tasks.length+1)};
     // Add task on tasks
